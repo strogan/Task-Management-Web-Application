@@ -1,6 +1,7 @@
 import { useState, useEffect, FC } from "react";
 import Task from "./task";
 import TaskForm from "./taskForm";
+import { backendUrl } from "../constants";
 
 const TaskList: FC = () => {
   const [tasks, setTasks] = useState([]);
@@ -11,7 +12,7 @@ const TaskList: FC = () => {
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch("/api/tasks");
+      const response = await fetch(`${backendUrl}/tasks`);
       const data = await response.json();
       setTasks(data);
     } catch (error) {
@@ -21,7 +22,7 @@ const TaskList: FC = () => {
 
   const handleDeleteTask = async (taskId: number) => {
     try {
-      await fetch(`/api/tasks/${taskId}`, {
+      await fetch(`${backendUrl}/tasks/${taskId}`, {
         method: "DELETE",
       });
       fetchTasks();

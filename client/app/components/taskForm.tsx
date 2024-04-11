@@ -1,4 +1,5 @@
 import { FC, useState } from "react";
+import { backendUrl } from "../constants";
 
 interface TaskFormProps {
   fetchTasks: () => void;
@@ -16,7 +17,7 @@ const TaskForm: FC<TaskFormProps> = ({ fetchTasks }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await fetch("/api/tasks", {
+      await fetch(`${backendUrl}/tasks`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
