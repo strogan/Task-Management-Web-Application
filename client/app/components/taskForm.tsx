@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { backendUrl } from "../constants";
-import { Button, TextField, FormControl, FormHelperText } from "@mui/material";
+import { Button, TextField, FormControl } from "@mui/material";
 import { FormattedMessage } from "react-intl";
 
 interface TaskFormProps {

@@ -1,6 +1,6 @@
 "use client";
 import { FC, useState } from "react";
-import { IntlProvider, createIntl } from "react-intl";
+import { IntlProvider } from "react-intl";
 import messages_en from "./locales/en.json";
 import messages_cz from "./locales/cz.json";
 import TaskList from "./components/TaskList";

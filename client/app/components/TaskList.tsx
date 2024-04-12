@@ -130,25 +130,27 @@ const TaskList: FC = () => {
                   </Button>
                 </>
               ) : (
-                <ListItemText
-                  primary={task.title}
-                  secondary={task.description}
-                />
+                <>
+                  <ListItemText
+                    primary={task.title}
+                    secondary={task.description}
+                  />
+                  <ListItemSecondaryAction style={{ display: "flex" }}>
+                    <IconButton
+                      aria-label="edit"
+                      onClick={() => handleEditTask(task)}
+                    >
+                      <EditIcon />
+                    </IconButton>
+                    <IconButton
+                      aria-label="delete"
+                      onClick={() => handleDeleteTask(task.id)}
+                    >
+                      <DeleteIcon />
+                    </IconButton>
+                  </ListItemSecondaryAction>
+                </>
               )}
-              <ListItemSecondaryAction style={{ display: "flex" }}>
-                <IconButton
-                  aria-label="edit"
-                  onClick={() => handleEditTask(task)}
-                >
-                  <EditIcon />
-                </IconButton>
-                <IconButton
-                  aria-label="delete"
-                  onClick={() => handleDeleteTask(task.id)}
-                >
-                  <DeleteIcon />
-                </IconButton>
-              </ListItemSecondaryAction>
             </ListItem>
           ))}
         </List>
