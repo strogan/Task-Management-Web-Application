@@ -1,4 +1,14 @@
 {
   "greeting": "Ahoj světe",
-  "welcome": "Vítejte!"
+  "app.title": "Správce úloh",
+  "app.language": "Jazyk",
+  "taskList.addTask": "Přidat úkol",
+  "taskList.list": "Seznam úkolů",
+  "form.title": "Titul",
+  "form.addTask": "Přidat úkol",
+  "form.description": "Popis",
+  "form.save": "Uložit",
+  "form.cancel": "Zrušení",
+  "form.emptyTitle": "Název nemůže být prázdný",
+  "form.emptyDescription": "Popis nemůže být prázdný"
 }

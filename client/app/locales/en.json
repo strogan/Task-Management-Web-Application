@@ -1,4 +1,14 @@
 {
   "greeting": "Hello world",
-  "welcome": "Welcome!"
+  "app.title": "Task Manager",
+  "app.language": "Language",
+  "taskList.addTask": "Add Task",
+  "taskList.list": "Task List",
+  "form.title": "Title",
+  "form.addTask": "Add Task",
+  "form.description": "Description",
+  "form.save": "Save",
+  "form.cancel": "Cancel",
+  "form.emptyTitle": "Title cannot be empty",
+  "form.emptyDescription": "Description cannot be empty"
 }

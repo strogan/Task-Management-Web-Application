@@ -23,8 +23,8 @@ app.get("/tasks", (req, res) => {
 });
 
 app.post("/tasks", (req, res) => {
-  const { title } = req.body;
-  const newTask = { id: tasks.length + 1, title };
+  const { title, description } = req.body;
+  const newTask = { id: tasks.length + 1, title, description };
   tasks.push(newTask);
   res.status(201).json(newTask);
 });
@@ -41,12 +41,12 @@ app.get("/tasks/:id", (req, res) => {
 
 app.put("/tasks/:id", (req, res) => {
   const taskId = parseInt(req.params.id);
-  const { title } = req.body;
+  const { title, description } = req.body;
   const taskIndex = tasks.findIndex((task) => task.id === taskId);
   if (taskIndex === -1) {
     res.status(404).json({ message: "Task not found" });
   } else {
-    tasks[taskIndex] = { ...tasks[taskIndex], title };
+    tasks[taskIndex] = { ...tasks[taskIndex], title, description };
     res.json(tasks[taskIndex]);
   }
 });
